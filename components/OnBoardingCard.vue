@@ -2,7 +2,7 @@
     <div style="height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; flex-direction:column;">
     <Header/>
     <div style="width:100%; display:flex; justify-content:center; align-items:center; flex-direction:column;">
-    <img src="../assets/1.png" style="height:65vh; padding-bottom:40px"/>
+    <img src="../static/1.png" style="height:65vh; padding-bottom:40px"/>
     </div>
 
     <DownLoadButton/>
