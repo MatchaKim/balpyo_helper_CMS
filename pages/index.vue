@@ -66,8 +66,8 @@
       </swiper-slide>
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
-    <div :class="{ 'download-button-container': true, active: currentSlide >= 4 }">
-      <DownLoadButton v-if="isAndroid"/>
+    <div :class="{ 'download-button-container': true, active: currentSlide >= 4 }" >
+      <DownLoadButton v-if="isAndroid" @click="download()" />
       <WelcomeButton v-else/>
     </div>
   </div>
@@ -84,6 +84,11 @@ import WelcomeButton from "~/components/WelcomeButton.vue";
 
 const currentSlide = ref(1);
 const isAndroid = ref(false);
+
+function download() {
+  console.log("down")
+ window.location.href = "https://balpyo-bucket.s3.ap-northeast-2.amazonaws.com/0168080c-9a0a-4e16-8492-c1e6598faaa6.mp3";
+}
 
 
 const onSwiper = (swiper) => {
@@ -116,6 +121,7 @@ const checkAndroid = () => {
 
 onMounted(() => {
   checkAndroid();
+ 
 });
 </script>
 
@@ -171,6 +177,7 @@ a {
   padding: 0 0 0 0;
   display: flex;
   justify-content: center;
+  z-index: 1000;
 }
 
 .download-button-container.active {
