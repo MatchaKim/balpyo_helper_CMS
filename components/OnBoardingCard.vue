@@ -27,7 +27,7 @@
         flex-direction: column;
       "
     >
-    <img :src="imagePath" style="height: 55vh; padding-bottom: 35px" />
+    <img :src="imagePath" style="height: 50vh; padding-bottom: 10vh" />
     </div>
   </div>
 </div>

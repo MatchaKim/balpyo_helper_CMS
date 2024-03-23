@@ -40,7 +40,7 @@
     </swiper>
     <div
 
-  :style="{ transform: currentSlide == 4 ? 'translateX(-50%) translateY(-28vh)' : 'translateX(-50%)' }"
+  :style="{ transform: currentSlide == 4 ? 'translateX(-50%) translateY(-26vh)' : 'translateX(-50%)' }"
   class="download-button-container"
 >
       <DownLoadButton
@@ -132,7 +132,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 1vh 0;
+  padding: 0 0 7vh 0;
   display: flex;
   justify-content: center;
 }
