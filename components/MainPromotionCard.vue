@@ -1,6 +1,6 @@
 <template>
-    <div style="height:90vh; width:100vw; display:flex; justify-content:center; align-items:center; flex-direction:column;">
-     <div style="height:100%; width:100%; display:flex; justify-content:center; align-items:center; flex-direction:column;">
+    <div style="width:100vw; height:90vh; display:flex; justify-content:center; align-items:center; flex-direction:column;">
+     <div style=" display:flex; justify-content:center; align-items:center; flex-direction:column;">
         <div style="font-size: 22px; font-weight:bold; color:white;">
             발표가 쉬워지는 시간
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" style="position: relative; height: 90vh">
+  <div class="hello" style="position: relative; height: 100vh">
     <div
       style="
         position: absolute;
@@ -23,7 +23,7 @@
         }"
       ></div>
 
-      <div
+      <!-- <div
         style="
           position: absolute;
           top: 40vh;
@@ -44,7 +44,7 @@
           <img src="/static/next icon inactivated.png" style="height: 8vh; pointer-events: none; transform: rotate(180deg)" v-if="currentSlide==4"/>
           <img src="/static/next icon.png" style="height: 8vh; pointer-events: none;" v-else />
         </div>
-      </div>
+      </div> -->
     </div>
     <swiper
     style="width:100vw"
@@ -67,12 +67,8 @@
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
     <div
-      :style="{
-        transform:
-          currentSlide == 4 ? 'translateX(-50%) translateY(-26vh)' : 'translateX(-50%)',
-      }"
-      class="download-button-container"
-    >
+  :class="{'download-button-container': true, active: currentSlide >= 4}"
+>
       <DownLoadButton />
     </div>
   </div>
@@ -153,14 +149,25 @@ a {
 }
 
 .download-button-container {
-  transition: transform 0.5s ease-in-out;
+  visibility: hidden; 
+  opacity: 0;
+  transform: translateY(100%); 
+  transition: all 0.6s ease-in-out; 
   position: absolute;
-  bottom: 0;
+  bottom: 40%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 0 0 7vh 0;
+  padding: 0 0 0 0;
   display: flex;
   justify-content: center;
 }
+
+
+.download-button-container.active {
+  visibility: visible; 
+  opacity: 1; 
+  transform: translateX(-50%) translateY(0); 
+}
+
 </style>

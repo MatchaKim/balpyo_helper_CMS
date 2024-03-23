@@ -1,15 +1,7 @@
 <template>
-    <div   style="
-      height:90vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    ">
   <div
     style="
-      height: 85vh;
+      height: 90vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -17,20 +9,30 @@
       flex-direction: column;
     "
   >
-    <Header :mainText="mainTextProc" :subText="subTextProc" />
     <div
       style="
-        width: 100%;
+        padding-top:18vh;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
       "
     >
-    <img :src="imagePath" style="height: 50vh; padding-bottom: 5vh" />
+      <Header :mainText="mainTextProc" :subText="subTextProc" />
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <img :src="imagePath" style="height: 70vh;" />
+      </div>
     </div>
   </div>
-</div>
 </template>
 <script setup>
 const mainTextProc = ref("");
@@ -46,10 +48,9 @@ onBeforeMount(() => {
   mainTextProc.value = props.mainText;
   subTextProc.value = props.subText;
   console.log(props.myPage);
-  imagePath.value = "../static/"+props.myPage+".png";
-  console.log("imagePath.value"+imagePath.value)
+  imagePath.value = "../static/" + props.myPage + ".png";
+  console.log("imagePath.value" + imagePath.value);
 });
-
 </script>
 
 <style scoped></style>
