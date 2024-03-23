@@ -87,7 +87,7 @@ const isAndroid = ref(false);
 
 function download() {
   console.log("down")
- window.location.href = "https://balpyo-bucket.s3.ap-northeast-2.amazonaws.com/0168080c-9a0a-4e16-8492-c1e6598faaa6.mp3";
+ window.location.href = "https://balpyo-bucket.s3.ap-northeast-2.amazonaws.com/balpyo.site.apk";
 }
 
 
