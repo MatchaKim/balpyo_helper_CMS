@@ -10,7 +10,6 @@
   <div
     style="
       height: 100vh;
-      padding :15vh 0;
       width: 100vw;
       display: flex;
       justify-content: center;
