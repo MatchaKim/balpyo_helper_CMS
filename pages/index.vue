@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" style="position: relative; height: calc(var(--vh, 1vh) * 100);">
+  <div class="hello" style="position: relative; height: calc(var(--vh, 1vh) * 100)">
     <div
       style="
         position: absolute;
@@ -66,10 +66,9 @@
       </swiper-slide>
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
-    <div
-      :class="{ 'download-button-container': true, active: currentSlide >= 4 }"
-    >
-      <DownLoadButton />
+    <div :class="{ 'download-button-container': true, active: currentSlide >= 4 }">
+      <DownLoadButton v-if="isIOS"/>
+      <WelcomeButton v-else/>
     </div>
   </div>
 </template>
@@ -81,8 +80,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import WelcomeButton from "~/components/WelcomeButton.vue";
 
 const currentSlide = ref(1);
+const isIOS = ref(false);
 
 const onSwiper = (swiper) => {
   console.log(swiper);
@@ -107,6 +108,14 @@ const data = [
     subText: "대본을 노래방에 온 것처럼 따라 읽기만해도\n자연스럽게 발표연습이 돼요.",
   },
 ];
+const checkIOS = () => {
+  const userAgent = window.navigator.userAgent;
+  const iosPlatforms = [/iPhone/i, /iPad/i, /iPod/i];
+  isIOS.value = iosPlatforms.some((platform) => platform.test(userAgent));
+};
+onMounted(() => {
+  checkIOS();
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
