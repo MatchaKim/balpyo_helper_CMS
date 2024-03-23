@@ -1,7 +1,7 @@
 <template>
   <div
     style="
-      height: 100vh;
+      height: 90vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -19,7 +19,7 @@
         flex-direction: column;
       "
     >
-    <img :src="imagePath" style="height: 65vh; padding-bottom: 40px" />
+    <img :src="imagePath" style="height: 50vh; padding-bottom: 35px" />
     </div>
   </div>
 </template>

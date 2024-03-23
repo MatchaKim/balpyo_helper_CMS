@@ -1,10 +1,10 @@
 <template>
-  <div class="hello" style="position: relative; height: 100vh">
+  <div class="hello" style="position: relative; height: 90vh;">
     <div
       style="
         position: absolute;
-        padding: 20px 0;
-        top: 20px;
+        padding: 15px 0;
+        top: 15px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
@@ -46,7 +46,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        padding: 4.5vh 0;
+        padding: 1vh 0;
         display: flex;
         justify-content: center;
       "
@@ -111,7 +111,7 @@ a {
 .hello {
   width: 100%;
   height: 100%;
-  background-color: #eb2a63;
+
 }
 .activated,
 .inactivated {

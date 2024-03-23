@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage/>
   </NuxtLayout>
 </template>
 
@@ -11,6 +11,9 @@
   src: url('./static/Cafe24Moyamoya-Regular-v1.0.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+body{
+  background-color: #eb2a63;
 }
 
 </style>
