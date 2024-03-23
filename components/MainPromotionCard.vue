@@ -7,7 +7,11 @@
         <div style="font-family:Cafe24Moyamoya; font-size:70px; color:white; padding: 14px 0 40px">
             발표몇분
         </div>
-        <DownLoadButton/>
+        <DownLoadButton />
      </div>
     </div>
 </template>
+
+<script setup>
+
+</script>
