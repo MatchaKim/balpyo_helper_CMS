@@ -9,7 +9,7 @@
     ">
   <div
     style="
-      height: 90vh;
+      height: 85vh;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -27,7 +27,7 @@
         flex-direction: column;
       "
     >
-    <img :src="imagePath" style="height: 50vh; padding-bottom: 10vh" />
+    <img :src="imagePath" style="height: 50vh; padding-bottom: 5vh" />
     </div>
   </div>
 </div>
