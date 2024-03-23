@@ -4,7 +4,7 @@
       style="
         position: absolute;
         padding: 15px 0;
-        top: 15px;
+        top: 7vh;
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
@@ -39,18 +39,10 @@
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
     <div
-      v-if="currentSlide != 4"
-      style="
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        padding: 1vh 0;
-        display: flex;
-        justify-content: center;
-      "
-    >
+
+  :style="{ transform: currentSlide == 4 ? 'translateX(-50%) translateY(-28vh)' : 'translateX(-50%)' }"
+  class="download-button-container"
+>
       <DownLoadButton
       />
     </div>
@@ -121,14 +113,28 @@ a {
 .activated {
   width: 21vw;
   height: 2px;
-  background-color: white; /* 활성화 상태의 색상 */
+  background-color: white; 
   border-radius: 5px;
 }
 
 .inactivated {
   width: 21vw;
   height: 2px;
-  background-color: #ffffff80; /* 비활성화 상태의 색상 (투명도 포함) */
+  background-color: #ffffff80; 
   border-radius: 5px;
 }
+
+
+.download-button-container {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 1vh 0;
+  display: flex;
+  justify-content: center;
+}
+
 </style>

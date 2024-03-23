@@ -1,7 +1,16 @@
 <template>
+    <div   style="
+      height:100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    ">
   <div
     style="
-      height: 90vh;
+      height: 100vh;
+      padding :15vh 0;
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -19,9 +28,10 @@
         flex-direction: column;
       "
     >
-    <img :src="imagePath" style="height: 50vh; padding-bottom: 35px" />
+    <img :src="imagePath" style="height: 55vh; padding-bottom: 35px" />
     </div>
   </div>
+</div>
 </template>
 <script setup>
 const mainTextProc = ref("");
