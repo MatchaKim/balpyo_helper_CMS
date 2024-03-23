@@ -1,7 +1,7 @@
 <template>
   <div
     style="
-      height: 90vh;
+      height: height: calc(var(--vh, 1vh) * 100);
       width: 100vw;
       display: flex;
       justify-content: center;
@@ -11,7 +11,7 @@
   >
     <div
       style="
-        padding-top:18vh;
+        padding-top:12vh;
         width: 100vw;
         display: flex;
         justify-content: center;
@@ -27,6 +27,7 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          height:100%;
         "
       >
         <img :src="imagePath" style="height: 70vh;" />

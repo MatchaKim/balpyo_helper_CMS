@@ -16,4 +16,18 @@ body{
   background-color: #eb2a63;
 }
 
+
+
 </style>
+
+<script setup>
+function setScreenSize() {
+  let vh = window.innerHeight * 0.01;
+
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+onMounted(()=>{
+  setScreenSize()
+})
+</script>

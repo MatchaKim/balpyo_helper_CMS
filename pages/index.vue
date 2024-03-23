@@ -1,10 +1,10 @@
 <template>
-  <div class="hello" style="position: relative; height: 100vh">
+  <div class="hello" style="position: relative; height: calc(var(--vh, 1vh) * 100);">
     <div
       style="
         position: absolute;
         padding: 15px 0;
-        top: 2vh;
+        top: 6vh;
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
@@ -47,7 +47,7 @@
       </div> -->
     </div>
     <swiper
-    style="width:100vw"
+      style="width: 100vw"
       :slides-per-view="1"
       :space-between="0"
       :modules="modules"
@@ -67,8 +67,8 @@
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
     <div
-  :class="{'download-button-container': true, active: currentSlide >= 4}"
->
+      :class="{ 'download-button-container': true, active: currentSlide >= 4 }"
+    >
       <DownLoadButton />
     </div>
   </div>
@@ -149,10 +149,10 @@ a {
 }
 
 .download-button-container {
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0;
-  transform: translateY(100%); 
-  transition: all 0.6s ease-in-out; 
+  transform: translateY(100%);
+  transition: all 0.6s ease-in;
   position: absolute;
   bottom: 40%;
   left: 50%;
@@ -163,11 +163,9 @@ a {
   justify-content: center;
 }
 
-
 .download-button-container.active {
-  visibility: visible; 
-  opacity: 1; 
-  transform: translateX(-50%) translateY(0); 
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
-
 </style>
