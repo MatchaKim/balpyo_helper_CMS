@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" style="position: relative; height: 90vh;">
+  <div class="hello" style="position: relative; height: 90vh">
     <div
       style="
         position: absolute;
@@ -22,8 +22,32 @@
           inactivated: currentSlide !== index,
         }"
       ></div>
+
+      <div
+        style="
+          position: absolute;
+          top: 40vh;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 100;
+          width: 100vw;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        "
+      >
+        <div>
+          <img src="/static/next icon inactivated.png" style="height: 8vh; pointer-events: none;" v-if="currentSlide==1"/>
+          <img src="/static/next icon.png" style="height: 8vh; pointer-events: none; transform: rotate(180deg)" v-else />
+        </div>
+        <div>
+          <img src="/static/next icon inactivated.png" style="height: 8vh; pointer-events: none; transform: rotate(180deg)" v-if="currentSlide==4"/>
+          <img src="/static/next icon.png" style="height: 8vh; pointer-events: none;" v-else />
+        </div>
+      </div>
     </div>
     <swiper
+    style="width:100vw"
       :slides-per-view="1"
       :space-between="0"
       :modules="modules"
@@ -34,17 +58,22 @@
       }"
     >
       <swiper-slide v-for="(item, index) in data" :key="'slide-' + index">
-        <OnBoardingCard :mainText="item.mainText" :subText="item.subText" :myPage="index+1" />
+        <OnBoardingCard
+          :mainText="item.mainText"
+          :subText="item.subText"
+          :myPage="index + 1"
+        />
       </swiper-slide>
       <swiper-slide><MainPromotionCard /></swiper-slide>
     </swiper>
     <div
-
-  :style="{ transform: currentSlide == 4 ? 'translateX(-50%) translateY(-26vh)' : 'translateX(-50%)' }"
-  class="download-button-container"
->
-      <DownLoadButton
-      />
+      :style="{
+        transform:
+          currentSlide == 4 ? 'translateX(-50%) translateY(-26vh)' : 'translateX(-50%)',
+      }"
+      class="download-button-container"
+    >
+      <DownLoadButton />
     </div>
   </div>
 </template>
@@ -103,7 +132,6 @@ a {
 .hello {
   width: 100%;
   height: 100%;
-
 }
 .activated,
 .inactivated {
@@ -113,17 +141,16 @@ a {
 .activated {
   width: 21vw;
   height: 2px;
-  background-color: white; 
+  background-color: white;
   border-radius: 5px;
 }
 
 .inactivated {
   width: 21vw;
   height: 2px;
-  background-color: #ffffff80; 
+  background-color: #ffffff80;
   border-radius: 5px;
 }
-
 
 .download-button-container {
   transition: transform 0.5s ease-in-out;
@@ -136,5 +163,4 @@ a {
   display: flex;
   justify-content: center;
 }
-
 </style>
