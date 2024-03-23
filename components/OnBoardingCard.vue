@@ -9,7 +9,7 @@
     ">
   <div
     style="
-      height: 100vh;
+      height: 90vh;
       width: 100vw;
       display: flex;
       justify-content: center;
