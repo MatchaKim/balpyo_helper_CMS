@@ -1,4 +1,5 @@
 <template>
+    <ConfettiExplosion v-if="currentSlide==4" />
   <div class="hello" style="position: relative; height: calc(var(--vh, 1vh) * 100)">
     <div
       style="
@@ -76,6 +77,7 @@
 <script setup>
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import ConfettiExplosion from "vue-confetti-explosion";
 
 // Import Swiper styles
 import "swiper/css";
